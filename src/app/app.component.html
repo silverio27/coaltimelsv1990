@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+  <a mat-button>
+    <span class="mat-button-wrapper">
+      <img
+        src="assets/coal-ico-full.png"
+        alt=""
+        srcset=""
+        class="coal-time-logo"
+      />
+      <span>Coaltime</span>
+    </span>
+  </a>
+</mat-toolbar>
+
+<div class="header">
+  <img src="assets/coal-time-logo.png" alt="" srcset="" class="avatar" />
+</div>
+
+<a mat-button class="profile">
+  <span class="mat-button-wrapper">
+    <img src="assets/profile-pic.jpeg" alt="" srcset="" />
+    <span>Lucas Silvério</span>
+  </span>
+</a>
+
+<div class="posts mat-elevation-z8">
+  <h1>Minhas receitas</h1>
+  <mat-divider color="primary"></mat-divider>
+
+  <div
+    class="content"
+    fxLayout="row wrap"
+    fxLayoutAlign="start start"
+    fxLayoutGap="10px"
+  >
+    <app-food-card *ngFor="let item of list" [food]="item"></app-food-card>
+  </div>
+</div>
